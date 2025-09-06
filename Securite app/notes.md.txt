@@ -1,0 +1,6 @@
+Utilisateur:
+  Personne utilisant la base de donnée
+Rôle:
+  Titre lié à un ensemble de permissions
+Profil:
+  Limitations attribuées à un rôle ou utilisateur
