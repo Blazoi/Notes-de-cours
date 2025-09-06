@@ -76,4 +76,25 @@ Contrôle de l'ordre d'exécution du programme
 | Optional parameters | Parameters with default values. | `void Print(string msg="Hello") { }` |
 | Static methods      | Belong to class, not object. | `static void Info() { }` |
 
-## 
+##
+
+
+## OOP
+
+
+### Attributs 
+`public Point Centre { get; private set }`
+
+
+|||
+|-|-
+`static` : Class or method can be called but not <br> instantiated| `Calc.cube(x)` returns x^3
+`abstract` : Can instantiate a subclass <br>but not itself|:x: `Shape s = new Shape()` <br> :white_check_mark: `Shape s = new Circle()`
+**Static variable** <br> Owned by the class and not the objects <br> Example: How many times a thing <br> was used today|`static int compteur`
+
+
+Data types
+|Data Types||
+|-|-|
+**Stack** (Pile) | **LIFA** (Last In First Out)
+|**Queue** (File)| **FIFO** (First In First Out)
