@@ -93,8 +93,10 @@ Contrôle de l'ordre d'exécution du programme
 **Static variable** <br> Owned by the class and not the objects <br> Example: How many times a thing <br> was used today|`static int compteur`
 
 
-Data types
-|Data Types||
+## Data Structures
+
+|Data Structures ||
 |-|-|
-**Stack** (Pile) | **LIFA** (Last In First Out)
-|**Queue** (File)| **FIFO** (First In First Out)
+|**Stack**| **LIFA** (Last In First Out)
+|**Queue**|**FIFO** (First In First Out)
+|**List**|

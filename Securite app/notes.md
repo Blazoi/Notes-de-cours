@@ -1,17 +1,44 @@
 ## Définitions
 #### Utilisateur:
-- Personne utilisant la base de donnée
+- Connexion utilisant la base de donnée connectée à un schéma
+- Créer un utilisateur : `CREATE USER`*`nom_user`*`IDENTIFIED BY`*`password`*
+**Schéma :**
+    - Ensemble d'objets apartenant à un utilisateur 
+    - Automatiquement crée 
+    - Même nom que l'utilisateur
+#### Privilèges
+- Permissions quant aux interactions avec la *bd*
+- **Privilèges systèmes :**
+    - Privilèges valables sur la base entière
+- **Privilèges objets :**
+    - Privilèges sur des tables ou colonnes spécifiques
+- **Commandes**
+    - **GRANT** : Donner des permissions
+    - **REVOKE** : Retirer des permissions
 #### Rôle:
-- Titre lié à un ensemble de permissions
+- Regroupement de permissions
+- **Étapes :**`
+    - Créer rôle : `CREATE ROLE`*`nom_role`*
+    - Donner des permissions au rôle : `GRANT`*`PERMISSIONS nom_role`*
+    - Donner le rôle à un utilisateur : `GRANT`*`nom_role`*`TO`*`user`*
+
 #### Profil:
 - Limitations attribuées à un rôle ou utilisateur
+- **Deux axes :**
+    - Limitations Mot de Passe
+    - Limitations utilisation de ressources
+# Admnisitration
+#### DBA
+
 #### CDB
 - Nommé **CDB$ROOT**
 - Username précédé par **C##**
 - Regroupe et gère les PDB
-- Utilisateur CDB a accès à tous les PDB
+- Utilisateur CDB a accès à toutes les PDB
 #### PDB
 - Accès local uniquement
+- Sert séparer la *bd* en petites équipes
+
 
 #### Tablespace
 - Permet de regrouper des objets de *bd* reliés 
@@ -34,7 +61,7 @@
 |-|-|
 |**`SESSIONS_PER_USER`**|Nombre de sessions pouvant <br> être ouvertes en même temps|
 |**`CONNECT_TIME`**|Temps maximal de connection <br> par session|
-|**`IDLE_TIME`**|Temps maximal d'inactivité <br> avant déconnexion|
+|**`IDLE_TIME`**|Temps maximal d'inactivité <br> avant déconnexion (en **minutes**)|
 |**`LOGICAL_READS_PER_SESSION`**|Nombre maximal de lectures <br> logiques par session|
 |**`FAILED_LOGIN_ATTEMPS`**|Maximum de tentatives <br> échouées|
 |**`PASSWORD_LIFE_TIME`**|Temps de validité du mot de <br> passe avant d'avoir à le changer <br>(en **jours**)|
@@ -58,3 +85,4 @@
 |Abbréviation|Signification|
 |-|-|
 |*bd*|**B**ase de **D**onnées|
+|*DBA*|**D**ata**B**ase **A**dminitrator
