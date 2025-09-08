@@ -2,7 +2,7 @@
 #### Utilisateur:
 - Connexion utilisant la base de donnée connectée à un schéma
 - Créer un utilisateur : `CREATE USER`*`nom_user`*`IDENTIFIED BY`*`password`*
-**Schéma :**
+- **Schéma :**
     - Ensemble d'objets apartenant à un utilisateur 
     - Automatiquement crée 
     - Même nom que l'utilisateur
